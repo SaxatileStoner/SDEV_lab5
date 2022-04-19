@@ -330,5 +330,8 @@ def __main__():
 
 
 if __name__ == '__main__':
-    __main__()
-    print(f'{" Goodbye! ":*^64}')
+    exit_code = __main__()
+    if exit_code == 0:
+        print(f'{" Goodbye! ":*^64}')
+    else:
+        print(f'{" Encountered Crit Error! ":*^64}')
