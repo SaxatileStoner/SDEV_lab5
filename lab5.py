@@ -320,7 +320,7 @@ def __main__():
 
             else:
                 print("\nUnexpected Error! Closing Program...\n")
-                return 1
+                return 1  # Exits with non-zero exit code
 
         elif usr_option == 3:
             return 0  # Completely exits main
