@@ -130,7 +130,7 @@ def pop_process(column):
     rows = []
 
     # Open csv file and append attrubutes to local arrays
-    with open('csv_data/PopChange.csv', 'r') as csv_file:
+    with open('csv_data/PopChange.csv', 'r', encoding='UTF-8') as csv_file:
 
         csv_reader = csv.reader(csv_file)
 
@@ -150,7 +150,7 @@ def pop_process(column):
 
     else:
         print("Undexpected Error! Column param not as expected!")
-        return 1
+        return
 
     # Append all values of the selected column to
     # it's own array for calulating: Count, Mean,
@@ -200,7 +200,7 @@ def housing_process(column):
     fields = []
     rows = []
 
-    with open('csv_data/Housing.csv', 'r') as csv_file:
+    with open('csv_data/Housing.csv', 'r', encoding='UTF-8') as csv_file:
         csv_reader = csv.reader(csv_file)
 
         fields = next(csv_reader)
@@ -225,7 +225,7 @@ def housing_process(column):
 
     else:
         print("Undexpected Error! Column param not as expected!")
-        return 1
+        return
 
     # Append all values of the selected column to
     # it's own array for calulating: Count, Mean,
@@ -330,8 +330,8 @@ def __main__():
 
 
 if __name__ == '__main__':
-    exit_code = __main__()
-    if exit_code == 0:
+    EXIT_CODE = __main__()
+    if EXIT_CODE == 0:
         print(f'{" Goodbye! ":*^64}')
     else:
         print(f'{" Encountered Crit Error! ":*^64}')
